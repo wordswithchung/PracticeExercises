@@ -4,7 +4,6 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.*;
 
 /**
  * Created by chungnguyen on 6/3/17.
@@ -32,6 +31,5 @@ public class PracticeExercisesTest {
         int maxProfit3 = pe.getMaxProfit(stockPrices3);
         Assert.assertThat(maxProfit3, is(0));
     }
-
 
 }
