@@ -12,6 +12,22 @@ public class PracticeExercisesTest {
     PracticeExercises pe = new PracticeExercises();
 
     @Test
+    public void testBinarySearch() {
+        // test empty array, expect to see -1
+        int[] haystack1 = {};
+        int binarySearch1 = pe.binarySearch(haystack1, 5);
+        Assert.assertThat(binarySearch1, is(-1));
+
+        // happy path
+        int[] haystack2 = {0, 1, 14, 39, 44, 45, 56, 74, 99, 103932932};
+        int binarySearch2 = pe.binarySearch(haystack2, 1);
+        Assert.assertThat(binarySearch2, is(1));
+
+//        int binarySearch3 = pe.binarySearch(haystack2, 44);
+//        Assert.assertThat(binarySearch3, is(4));
+    }
+
+    @Test
     public void testGetMaxProfit() {
         // test array with only one int
         int[] stockPrices1 = {50};
